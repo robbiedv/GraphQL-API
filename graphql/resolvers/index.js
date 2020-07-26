@@ -1,5 +1,5 @@
 
-cont Article = require("../../models/article")
+const Article = require("../../models/article")
 
 module.exports = {
   articles: async () => {
