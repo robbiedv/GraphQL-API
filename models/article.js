@@ -9,6 +9,11 @@ const articleSchema = new Schema (
       type: String,
       required: true,
     },
+
+    body: {
+      type: String,
+      required: true,
+    },
   },
   {timestamps: true}
 )
