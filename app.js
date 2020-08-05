@@ -1,19 +1,20 @@
 const express = require("express");
-const { graphqlHttp } = require("express-graphql");
+const { graphqlHTTP } = require("express-graphql");
 const mongoose = require("mongoose");
 const graphqlSchema = require("./graphql/schema");
 const graphqlResolvers = require("./graphql/resolvers");
 
 const app = express();
 
-app.use('/graphql', graphqlHttp({
+app.use('/graphql', graphqlHTTP({
     schema: graphqlSchema,
     rootValue: graphqlResolvers,
     graphiql: true,
   }),
 );
 
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-uox7n.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@graphql-api.8nv7g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true

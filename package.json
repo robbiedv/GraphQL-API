@@ -8,7 +8,7 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Robbie De Vries",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.10.5",
